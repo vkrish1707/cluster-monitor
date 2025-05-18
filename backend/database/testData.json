@@ -1,0 +1,22 @@
+{
+    "clusters": [
+      {
+        "id": "test-cluster-001",
+        "metrics": {
+          "iops": [
+            { "timestamp": "2025-05-18T00:00:00Z", "value": 99 },
+            { "timestamp": "2025-05-18T00:01:00Z", "value": 105 }
+          ],
+          "throughput": [
+            { "timestamp": "2025-05-18T00:00:00Z", "value": 200 },
+            { "timestamp": "2025-05-18T00:01:00Z", "value": 215 }
+          ]
+        },
+        "snapshotPolicy": {
+          "frequency": "weekly",
+          "time": "01:30",
+          "locking": false
+        }
+      }
+    ]
+  }

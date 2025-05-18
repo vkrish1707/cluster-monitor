@@ -1,0 +1,34 @@
+{
+  "clusters": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "metrics": {
+        "iops": [
+          {
+            "timestamp": "2025-05-18T00:00:00Z",
+            "value": 120
+          },
+          {
+            "timestamp": "2025-05-18T00:01:00Z",
+            "value": 130
+          }
+        ],
+        "throughput": [
+          {
+            "timestamp": "2025-05-18T00:00:00Z",
+            "value": 250
+          },
+          {
+            "timestamp": "2025-05-18T00:01:00Z",
+            "value": 270
+          }
+        ]
+      },
+      "snapshotPolicy": {
+        "frequency": "weekly",
+        "time": "02:00",
+        "locking": false
+      }
+    }
+  ]
+}
