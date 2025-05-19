@@ -26,9 +26,13 @@ test.group('Cluster API', () => {
 
   test('PUT /clusters/:id/policy updates snapshot policy', async () => {
     const update = {
-      frequency: 'weekly',
-      time: '02:00',
-      locking: false,
+      "frequency": "weekly",
+      "time": "03:00",
+      "timezone": "America/Los_Angeles",
+      "days": ["monday", "wednesday", "friday"],
+      "deleteAfterDays": 14,
+      "enabled": true,
+      "locking": true
     }
 
     await supertest(BASE_URL)

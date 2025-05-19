@@ -20,7 +20,17 @@ export default class ClusterService {
     const cluster = data.clusters.find((c) => c.id === clusterId)
     if (!cluster) throw new Error('Cluster not found')
 
-    cluster.snapshotPolicy = newPolicy
+    cluster.snapshotPolicy = {
+      ...cluster.snapshotPolicy,
+      frequency: newPolicy.frequency,
+      time: newPolicy.time,
+      timezone: newPolicy.timezone,
+      deleteAfterDays: newPolicy.deleteAfterDays,
+      enabled: newPolicy.enabled,
+      locking: newPolicy.locking,
+      days: newPolicy.days
+    }
+
     await FileStorage.write(data)
   }
 }
