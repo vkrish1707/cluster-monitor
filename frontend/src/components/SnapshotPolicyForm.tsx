@@ -27,6 +27,7 @@ export default function SnapshotPolicyForm() {
     }
   }, [formData.deleteAfter]);
 
+  // useEffect to fetch the cluster policy data
   useEffect(() => {
     api.get(`/clusters/${clusterId}/policy`)
       .then(res => {
