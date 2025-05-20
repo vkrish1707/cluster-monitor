@@ -2,40 +2,2056 @@
   "clusters": [
     {
       "id": "123e4567-e89b-12d3-a456-426614174000",
+      "name": "Cluster A",
+      "region": "us-west-1",
+      "status": "active",
+      "created_at": "2024-11-20T12:00:00Z",
+      "updated_at": "2024-11-25T12:00:00Z",
       "metrics": {
         "iops": [
           {
-            "timestamp": "2025-05-18T00:00:00Z",
-            "value": 120
+            "timestamp": "2024-11-21T00:00:00Z",
+            "read": 14807,
+            "write": 6969
           },
           {
-            "timestamp": "2025-05-18T00:01:00Z",
-            "value": 130
+            "timestamp": "2024-11-21T01:00:00Z",
+            "read": 16965,
+            "write": 8237
+          },
+          {
+            "timestamp": "2024-11-21T02:00:00Z",
+            "read": 5093,
+            "write": 2522
+          },
+          {
+            "timestamp": "2024-11-21T03:00:00Z",
+            "read": 11308,
+            "write": 5082
+          },
+          {
+            "timestamp": "2024-11-21T04:00:00Z",
+            "read": 7115,
+            "write": 2755
+          },
+          {
+            "timestamp": "2024-11-21T05:00:00Z",
+            "read": 16995,
+            "write": 5132
+          },
+          {
+            "timestamp": "2024-11-21T06:00:00Z",
+            "read": 17074,
+            "write": 5108
+          },
+          {
+            "timestamp": "2024-11-21T07:00:00Z",
+            "read": 8841,
+            "write": 2022
+          },
+          {
+            "timestamp": "2024-11-21T08:00:00Z",
+            "read": 18807,
+            "write": 8249
+          },
+          {
+            "timestamp": "2024-11-21T09:00:00Z",
+            "read": 9615,
+            "write": 3587
+          },
+          {
+            "timestamp": "2024-11-21T10:00:00Z",
+            "read": 12028,
+            "write": 4465
+          },
+          {
+            "timestamp": "2024-11-21T11:00:00Z",
+            "read": 16049,
+            "write": 7606
+          },
+          {
+            "timestamp": "2024-11-21T12:00:00Z",
+            "read": 18687,
+            "write": 10052
+          },
+          {
+            "timestamp": "2024-11-21T13:00:00Z",
+            "read": 14774,
+            "write": 8676
+          },
+          {
+            "timestamp": "2024-11-21T14:00:00Z",
+            "read": 14478,
+            "write": 5970
+          },
+          {
+            "timestamp": "2024-11-21T15:00:00Z",
+            "read": 14371,
+            "write": 7227
+          },
+          {
+            "timestamp": "2024-11-21T16:00:00Z",
+            "read": 14489,
+            "write": 5713
+          },
+          {
+            "timestamp": "2024-11-21T17:00:00Z",
+            "read": 9194,
+            "write": 4540
+          },
+          {
+            "timestamp": "2024-11-21T18:00:00Z",
+            "read": 15206,
+            "write": 8582
+          },
+          {
+            "timestamp": "2024-11-21T19:00:00Z",
+            "read": 100016,
+            "write": 70177
+          },
+          {
+            "timestamp": "2024-11-21T20:00:00Z",
+            "read": 16293,
+            "write": 3618
+          },
+          {
+            "timestamp": "2024-11-21T21:00:00Z",
+            "read": 13809,
+            "write": 5664
+          },
+          {
+            "timestamp": "2024-11-21T22:00:00Z",
+            "read": 11251,
+            "write": 4032
+          },
+          {
+            "timestamp": "2024-11-21T23:00:00Z",
+            "read": 5206,
+            "write": 2676
+          },
+          {
+            "timestamp": "2024-11-22T00:00:00Z",
+            "read": 18453,
+            "write": 6120
+          },
+          {
+            "timestamp": "2024-11-22T01:00:00Z",
+            "read": 17363,
+            "write": 6971
+          },
+          {
+            "timestamp": "2024-11-22T02:00:00Z",
+            "read": 11900,
+            "write": 5700
+          },
+          {
+            "timestamp": "2024-11-22T03:00:00Z",
+            "read": 14347,
+            "write": 5403
+          },
+          {
+            "timestamp": "2024-11-22T04:00:00Z",
+            "read": 17836,
+            "write": 7561
+          },
+          {
+            "timestamp": "2024-11-22T05:00:00Z",
+            "read": 13430,
+            "write": 3719
+          },
+          {
+            "timestamp": "2024-11-22T06:00:00Z",
+            "read": 9159,
+            "write": 1968
+          },
+          {
+            "timestamp": "2024-11-22T07:00:00Z",
+            "read": 11966,
+            "write": 2582
+          },
+          {
+            "timestamp": "2024-11-22T08:00:00Z",
+            "read": 19137,
+            "write": 5969
+          },
+          {
+            "timestamp": "2024-11-22T09:00:00Z",
+            "read": 16364,
+            "write": 5138
+          },
+          {
+            "timestamp": "2024-11-22T10:00:00Z",
+            "read": 8139,
+            "write": 2641
+          },
+          {
+            "timestamp": "2024-11-22T11:00:00Z",
+            "read": 8433,
+            "write": 2962
+          },
+          {
+            "timestamp": "2024-11-22T12:00:00Z",
+            "read": 14387,
+            "write": 4136
+          },
+          {
+            "timestamp": "2024-11-22T13:00:00Z",
+            "read": 5440,
+            "write": 2221
+          },
+          {
+            "timestamp": "2024-11-22T14:00:00Z",
+            "read": 17297,
+            "write": 7352
+          },
+          {
+            "timestamp": "2024-11-22T15:00:00Z",
+            "read": 7498,
+            "write": 1953
+          },
+          {
+            "timestamp": "2024-11-22T16:00:00Z",
+            "read": 6486,
+            "write": 3529
+          },
+          {
+            "timestamp": "2024-11-22T17:00:00Z",
+            "read": 8053,
+            "write": 2314
+          },
+          {
+            "timestamp": "2024-11-22T18:00:00Z",
+            "read": 13580,
+            "write": 4437
+          },
+          {
+            "timestamp": "2024-11-22T19:00:00Z",
+            "read": 14227,
+            "write": 6929
+          },
+          {
+            "timestamp": "2024-11-22T20:00:00Z",
+            "read": 13639,
+            "write": 4986
+          },
+          {
+            "timestamp": "2024-11-22T21:00:00Z",
+            "read": 11191,
+            "write": 3037
+          },
+          {
+            "timestamp": "2024-11-22T22:00:00Z",
+            "read": 10995,
+            "write": 3400
+          },
+          {
+            "timestamp": "2024-11-22T23:00:00Z",
+            "read": 13311,
+            "write": 3514
+          },
+          {
+            "timestamp": "2024-11-23T00:00:00Z",
+            "read": 13922,
+            "write": 5904
+          },
+          {
+            "timestamp": "2024-11-23T01:00:00Z",
+            "read": 12343,
+            "write": 1274
+          },
+          {
+            "timestamp": "2024-11-23T02:00:00Z",
+            "read": 7584,
+            "write": 2741
+          },
+          {
+            "timestamp": "2024-11-23T03:00:00Z",
+            "read": 14132,
+            "write": 6854
+          },
+          {
+            "timestamp": "2024-11-23T04:00:00Z",
+            "read": 13803,
+            "write": 818
+          },
+          {
+            "timestamp": "2024-11-23T05:00:00Z",
+            "read": 10488,
+            "write": 4873
+          },
+          {
+            "timestamp": "2024-11-23T06:00:00Z",
+            "read": 5966,
+            "write": 2439
+          },
+          {
+            "timestamp": "2024-11-23T07:00:00Z",
+            "read": 99999,
+            "write": 71757
+          },
+          {
+            "timestamp": "2024-11-23T08:00:00Z",
+            "read": 16092,
+            "write": 8444
+          },
+          {
+            "timestamp": "2024-11-23T09:00:00Z",
+            "read": 18610,
+            "write": 9982
+          },
+          {
+            "timestamp": "2024-11-23T10:00:00Z",
+            "read": 15771,
+            "write": 4098
+          },
+          {
+            "timestamp": "2024-11-23T11:00:00Z",
+            "read": 18618,
+            "write": 8425
+          },
+          {
+            "timestamp": "2024-11-23T12:00:00Z",
+            "read": 8702,
+            "write": 4047
+          },
+          {
+            "timestamp": "2024-11-23T13:00:00Z",
+            "read": 10261,
+            "write": 2848
+          },
+          {
+            "timestamp": "2024-11-23T14:00:00Z",
+            "read": 10108,
+            "write": 3385
+          },
+          {
+            "timestamp": "2024-11-23T15:00:00Z",
+            "read": 16800,
+            "write": 7256
+          },
+          {
+            "timestamp": "2024-11-23T16:00:00Z",
+            "read": 6183,
+            "write": 1967
+          },
+          {
+            "timestamp": "2024-11-23T17:00:00Z",
+            "read": 15417,
+            "write": 3676
+          },
+          {
+            "timestamp": "2024-11-23T18:00:00Z",
+            "read": 19795,
+            "write": 7688
+          },
+          {
+            "timestamp": "2024-11-23T19:00:00Z",
+            "read": 12668,
+            "write": 7085
+          },
+          {
+            "timestamp": "2024-11-23T20:00:00Z",
+            "read": 5022,
+            "write": 1125
+          },
+          {
+            "timestamp": "2024-11-23T21:00:00Z",
+            "read": 15167,
+            "write": 4685
+          },
+          {
+            "timestamp": "2024-11-23T22:00:00Z",
+            "read": 6997,
+            "write": 3030
+          },
+          {
+            "timestamp": "2024-11-23T23:00:00Z",
+            "read": 11005,
+            "write": 5338
+          },
+          {
+            "timestamp": "2024-11-24T00:00:00Z",
+            "read": 14265,
+            "write": 6782
+          },
+          {
+            "timestamp": "2024-11-24T01:00:00Z",
+            "read": 12281,
+            "write": 5188
+          },
+          {
+            "timestamp": "2024-11-24T02:00:00Z",
+            "read": 12899,
+            "write": 6266
+          },
+          {
+            "timestamp": "2024-11-24T03:00:00Z",
+            "read": 7604,
+            "write": 2967
+          },
+          {
+            "timestamp": "2024-11-24T04:00:00Z",
+            "read": 19216,
+            "write": 5271
+          },
+          {
+            "timestamp": "2024-11-24T05:00:00Z",
+            "read": 10046,
+            "write": 3644
+          },
+          {
+            "timestamp": "2024-11-24T06:00:00Z",
+            "read": 17506,
+            "write": 4088
+          },
+          {
+            "timestamp": "2024-11-24T07:00:00Z",
+            "read": 12782,
+            "write": 3832
+          },
+          {
+            "timestamp": "2024-11-24T08:00:00Z",
+            "read": 14038,
+            "write": 6080
+          },
+          {
+            "timestamp": "2024-11-24T09:00:00Z",
+            "read": 16760,
+            "write": 1639
+          },
+          {
+            "timestamp": "2024-11-24T10:00:00Z",
+            "read": 8944,
+            "write": 4641
+          },
+          {
+            "timestamp": "2024-11-24T11:00:00Z",
+            "read": 11276,
+            "write": 4336
+          },
+          {
+            "timestamp": "2024-11-24T12:00:00Z",
+            "read": 12578,
+            "write": 6978
+          },
+          {
+            "timestamp": "2024-11-24T13:00:00Z",
+            "read": 11187,
+            "write": 2831
+          },
+          {
+            "timestamp": "2024-11-24T14:00:00Z",
+            "read": 8673,
+            "write": 2892
+          },
+          {
+            "timestamp": "2024-11-24T15:00:00Z",
+            "read": 100025,
+            "write": 90853
+          },
+          {
+            "timestamp": "2024-11-24T16:00:00Z",
+            "read": 12957,
+            "write": 5212
+          },
+          {
+            "timestamp": "2024-11-24T17:00:00Z",
+            "read": 17107,
+            "write": 6848
+          },
+          {
+            "timestamp": "2024-11-24T18:00:00Z",
+            "read": 14278,
+            "write": 6528
+          },
+          {
+            "timestamp": "2024-11-24T19:00:00Z",
+            "read": 12552,
+            "write": 6556
+          },
+          {
+            "timestamp": "2024-11-24T20:00:00Z",
+            "read": 10773,
+            "write": 4077
+          },
+          {
+            "timestamp": "2024-11-24T21:00:00Z",
+            "read": 7609,
+            "write": 2100
+          },
+          {
+            "timestamp": "2024-11-24T22:00:00Z",
+            "read": 17010,
+            "write": 6237
+          },
+          {
+            "timestamp": "2024-11-24T23:00:00Z",
+            "read": 9169,
+            "write": 3686
+          },
+          {
+            "timestamp": "2024-11-25T00:00:00Z",
+            "read": 7305,
+            "write": 3298
+          },
+          {
+            "timestamp": "2024-11-25T01:00:00Z",
+            "read": 8787,
+            "write": 2630
+          },
+          {
+            "timestamp": "2024-11-25T02:00:00Z",
+            "read": 7892,
+            "write": 3600
+          },
+          {
+            "timestamp": "2024-11-25T03:00:00Z",
+            "read": 14127,
+            "write": 7418
           }
         ],
         "throughput": [
           {
-            "timestamp": "2025-05-18T00:00:00Z",
-            "value": 250
+            "timestamp": "2024-11-21T00:00:00Z",
+            "read": 1043,
+            "write": 281
           },
           {
-            "timestamp": "2025-05-18T00:01:00Z",
-            "value": 270
+            "timestamp": "2024-11-21T01:00:00Z",
+            "read": 1350,
+            "write": 623
+          },
+          {
+            "timestamp": "2024-11-21T02:00:00Z",
+            "read": 1550,
+            "write": 352
+          },
+          {
+            "timestamp": "2024-11-21T03:00:00Z",
+            "read": 791,
+            "write": 211
+          },
+          {
+            "timestamp": "2024-11-21T04:00:00Z",
+            "read": 1320,
+            "write": 330
+          },
+          {
+            "timestamp": "2024-11-21T05:00:00Z",
+            "read": 1303,
+            "write": 744
+          },
+          {
+            "timestamp": "2024-11-21T06:00:00Z",
+            "read": 1002,
+            "write": 402
+          },
+          {
+            "timestamp": "2024-11-21T07:00:00Z",
+            "read": 355,
+            "write": 162
+          },
+          {
+            "timestamp": "2024-11-21T08:00:00Z",
+            "read": 1170,
+            "write": 389
+          },
+          {
+            "timestamp": "2024-11-21T09:00:00Z",
+            "read": 802,
+            "write": 363
+          },
+          {
+            "timestamp": "2024-11-21T10:00:00Z",
+            "read": 1344,
+            "write": 708
+          },
+          {
+            "timestamp": "2024-11-21T11:00:00Z",
+            "read": 840,
+            "write": 443
+          },
+          {
+            "timestamp": "2024-11-21T12:00:00Z",
+            "read": 239,
+            "write": 50
+          },
+          {
+            "timestamp": "2024-11-21T13:00:00Z",
+            "read": 382,
+            "write": 147
+          },
+          {
+            "timestamp": "2024-11-21T14:00:00Z",
+            "read": 378,
+            "write": 149
+          },
+          {
+            "timestamp": "2024-11-21T15:00:00Z",
+            "read": 272,
+            "write": 95
+          },
+          {
+            "timestamp": "2024-11-21T16:00:00Z",
+            "read": 223,
+            "write": 130
+          },
+          {
+            "timestamp": "2024-11-21T17:00:00Z",
+            "read": 270,
+            "write": 120
+          },
+          {
+            "timestamp": "2024-11-21T18:00:00Z",
+            "read": 949,
+            "write": 641
+          },
+          {
+            "timestamp": "2024-11-21T19:00:00Z",
+            "read": 913,
+            "write": 373
+          },
+          {
+            "timestamp": "2024-11-21T20:00:00Z",
+            "read": 832,
+            "write": 182
+          },
+          {
+            "timestamp": "2024-11-21T21:00:00Z",
+            "read": 741,
+            "write": 179
+          },
+          {
+            "timestamp": "2024-11-21T22:00:00Z",
+            "read": 498,
+            "write": 138
+          },
+          {
+            "timestamp": "2024-11-21T23:00:00Z",
+            "read": 1487,
+            "write": 470
+          },
+          {
+            "timestamp": "2024-11-22T00:00:00Z",
+            "read": 392,
+            "write": 82
+          },
+          {
+            "timestamp": "2024-11-22T01:00:00Z",
+            "read": 1653,
+            "write": 573
+          },
+          {
+            "timestamp": "2024-11-22T02:00:00Z",
+            "read": 1756,
+            "write": 701
+          },
+          {
+            "timestamp": "2024-11-22T03:00:00Z",
+            "read": 1799,
+            "write": 843
+          },
+          {
+            "timestamp": "2024-11-22T04:00:00Z",
+            "read": 1527,
+            "write": 901
+          },
+          {
+            "timestamp": "2024-11-22T05:00:00Z",
+            "read": 1819,
+            "write": 637
+          },
+          {
+            "timestamp": "2024-11-22T06:00:00Z",
+            "read": 1370,
+            "write": 733
+          },
+          {
+            "timestamp": "2024-11-22T07:00:00Z",
+            "read": 1575,
+            "write": 340
+          },
+          {
+            "timestamp": "2024-11-22T08:00:00Z",
+            "read": 960,
+            "write": 532
+          },
+          {
+            "timestamp": "2024-11-22T09:00:00Z",
+            "read": 1752,
+            "write": 915
+          },
+          {
+            "timestamp": "2024-11-22T10:00:00Z",
+            "read": 424,
+            "write": 148
+          },
+          {
+            "timestamp": "2024-11-22T11:00:00Z",
+            "read": 242,
+            "write": 64
+          },
+          {
+            "timestamp": "2024-11-22T12:00:00Z",
+            "read": 710,
+            "write": 202
+          },
+          {
+            "timestamp": "2024-11-22T13:00:00Z",
+            "read": 1113,
+            "write": 266
+          },
+          {
+            "timestamp": "2024-11-22T14:00:00Z",
+            "read": 1135,
+            "write": 254
+          },
+          {
+            "timestamp": "2024-11-22T15:00:00Z",
+            "read": 428,
+            "write": 87
+          },
+          {
+            "timestamp": "2024-11-22T16:00:00Z",
+            "read": 1443,
+            "write": 704
+          },
+          {
+            "timestamp": "2024-11-22T17:00:00Z",
+            "read": 1957,
+            "write": 1130
+          },
+          {
+            "timestamp": "2024-11-22T18:00:00Z",
+            "read": 1438,
+            "write": 753
+          },
+          {
+            "timestamp": "2024-11-22T19:00:00Z",
+            "read": 1766,
+            "write": 942
+          },
+          {
+            "timestamp": "2024-11-22T20:00:00Z",
+            "read": 839,
+            "write": 487
+          },
+          {
+            "timestamp": "2024-11-22T21:00:00Z",
+            "read": 861,
+            "write": 529
+          },
+          {
+            "timestamp": "2024-11-22T22:00:00Z",
+            "read": 1464,
+            "write": 611
+          },
+          {
+            "timestamp": "2024-11-22T23:00:00Z",
+            "read": 851,
+            "write": 459
+          },
+          {
+            "timestamp": "2024-11-23T00:00:00Z",
+            "read": 485,
+            "write": 179
+          },
+          {
+            "timestamp": "2024-11-23T01:00:00Z",
+            "read": 888,
+            "write": 346
+          },
+          {
+            "timestamp": "2024-11-23T02:00:00Z",
+            "read": 1395,
+            "write": 688
+          },
+          {
+            "timestamp": "2024-11-23T03:00:00Z",
+            "read": 1765,
+            "write": 805
+          },
+          {
+            "timestamp": "2024-11-23T04:00:00Z",
+            "read": 1235,
+            "write": 336
+          },
+          {
+            "timestamp": "2024-11-23T05:00:00Z",
+            "read": 963,
+            "write": 912
+          },
+          {
+            "timestamp": "2024-11-23T06:00:00Z",
+            "read": 494,
+            "write": 173
+          },
+          {
+            "timestamp": "2024-11-23T07:00:00Z",
+            "read": 637,
+            "write": 246
+          },
+          {
+            "timestamp": "2024-11-23T08:00:00Z",
+            "read": 314,
+            "write": 81
+          },
+          {
+            "timestamp": "2024-11-23T09:00:00Z",
+            "read": 1102,
+            "write": 488
+          },
+          {
+            "timestamp": "2024-11-23T10:00:00Z",
+            "read": 1272,
+            "write": 703
+          },
+          {
+            "timestamp": "2024-11-23T11:00:00Z",
+            "read": 1619,
+            "write": 493
+          },
+          {
+            "timestamp": "2024-11-23T12:00:00Z",
+            "read": 1128,
+            "write": 389
+          },
+          {
+            "timestamp": "2024-11-23T13:00:00Z",
+            "read": 950,
+            "write": 688
+          },
+          {
+            "timestamp": "2024-11-23T14:00:00Z",
+            "read": 494,
+            "write": 248
+          },
+          {
+            "timestamp": "2024-11-23T15:00:00Z",
+            "read": 254,
+            "write": 65
+          },
+          {
+            "timestamp": "2024-11-23T16:00:00Z",
+            "read": 949,
+            "write": 272
+          },
+          {
+            "timestamp": "2024-11-23T17:00:00Z",
+            "read": 1016,
+            "write": 477
+          },
+          {
+            "timestamp": "2024-11-23T18:00:00Z",
+            "read": 1749,
+            "write": 531
+          },
+          {
+            "timestamp": "2024-11-23T19:00:00Z",
+            "read": 1189,
+            "write": 398
+          },
+          {
+            "timestamp": "2024-11-23T20:00:00Z",
+            "read": 1085,
+            "write": 395
+          },
+          {
+            "timestamp": "2024-11-23T21:00:00Z",
+            "read": 1255,
+            "write": 312
+          },
+          {
+            "timestamp": "2024-11-23T22:00:00Z",
+            "read": 1700,
+            "write": 1101
+          },
+          {
+            "timestamp": "2024-11-23T23:00:00Z",
+            "read": 1027,
+            "write": 417
+          },
+          {
+            "timestamp": "2024-11-24T00:00:00Z",
+            "read": 1158,
+            "write": 688
+          },
+          {
+            "timestamp": "2024-11-24T01:00:00Z",
+            "read": 887,
+            "write": 183
+          },
+          {
+            "timestamp": "2024-11-24T02:00:00Z",
+            "read": 917,
+            "write": 661
+          },
+          {
+            "timestamp": "2024-11-24T03:00:00Z",
+            "read": 238,
+            "write": 115
+          },
+          {
+            "timestamp": "2024-11-24T04:00:00Z",
+            "read": 1720,
+            "write": 400
+          },
+          {
+            "timestamp": "2024-11-24T05:00:00Z",
+            "read": 1766,
+            "write": 579
+          },
+          {
+            "timestamp": "2024-11-24T06:00:00Z",
+            "read": 1349,
+            "write": 273
+          },
+          {
+            "timestamp": "2024-11-24T07:00:00Z",
+            "read": 1247,
+            "write": 571
+          },
+          {
+            "timestamp": "2024-11-24T08:00:00Z",
+            "read": 1172,
+            "write": 316
+          },
+          {
+            "timestamp": "2024-11-24T09:00:00Z",
+            "read": 891,
+            "write": 196
+          },
+          {
+            "timestamp": "2024-11-24T10:00:00Z",
+            "read": 1442,
+            "write": 843
+          },
+          {
+            "timestamp": "2024-11-24T11:00:00Z",
+            "read": 816,
+            "write": 203
+          },
+          {
+            "timestamp": "2024-11-24T12:00:00Z",
+            "read": 896,
+            "write": 311
+          },
+          {
+            "timestamp": "2024-11-24T13:00:00Z",
+            "read": 1541,
+            "write": 825
+          },
+          {
+            "timestamp": "2024-11-24T14:00:00Z",
+            "read": 1261,
+            "write": 343
+          },
+          {
+            "timestamp": "2024-11-24T15:00:00Z",
+            "read": 393,
+            "write": 113
+          },
+          {
+            "timestamp": "2024-11-24T16:00:00Z",
+            "read": 1614,
+            "write": 327
+          },
+          {
+            "timestamp": "2024-11-24T17:00:00Z",
+            "read": 1931,
+            "write": 1113
+          },
+          {
+            "timestamp": "2024-11-24T18:00:00Z",
+            "read": 525,
+            "write": 146
+          },
+          {
+            "timestamp": "2024-11-24T19:00:00Z",
+            "read": 876,
+            "write": 469
+          },
+          {
+            "timestamp": "2024-11-24T20:00:00Z",
+            "read": 250,
+            "write": 129
+          },
+          {
+            "timestamp": "2024-11-24T21:00:00Z",
+            "read": 794,
+            "write": 399
+          },
+          {
+            "timestamp": "2024-11-24T22:00:00Z",
+            "read": 430,
+            "write": 249
+          },
+          {
+            "timestamp": "2024-11-24T23:00:00Z",
+            "read": 730,
+            "write": 194
+          },
+          {
+            "timestamp": "2024-11-25T00:00:00Z",
+            "read": 894,
+            "write": 547
+          },
+          {
+            "timestamp": "2024-11-25T01:00:00Z",
+            "read": 1666,
+            "write": 495
+          },
+          {
+            "timestamp": "2024-11-25T02:00:00Z",
+            "read": 558,
+            "write": 173
+          },
+          {
+            "timestamp": "2024-11-25T03:00:00Z",
+            "read": 1466,
+            "write": 317
           }
         ]
       },
       "snapshotPolicy": {
+        "policyName": "Project Zeus",
+        "applyToDirectory": "production/project-Z",
         "frequency": "weekly",
-        "time": "03:00",
-        "timezone": "America/Los_Angeles",
-        "days": [
-          "monday",
-          "wednesday",
-          "friday"
-        ],
-        "deleteAfterDays": 14,
+        "time": "05:00",
+        "deleteAfterDays": 92,
         "enabled": true,
-        "locking": true
+        "locking": true,
+        "days": [
+          "Tue",
+          "Wed",
+          "Thu"
+        ]
+      }
+    },
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174001",
+      "name": "Cluster B",
+      "region": "us-west-1",
+      "status": "active",
+      "created_at": "2024-11-20T12:00:00Z",
+      "updated_at": "2024-11-25T12:00:00Z",
+      "metrics": {
+        "iops": [
+          {
+            "timestamp": "2025-05-15T00:00:00Z",
+            "read": 12433,
+            "write": 8703
+          },
+          {
+            "timestamp": "2025-05-15T01:00:00Z",
+            "read": 5470,
+            "write": 3829
+          },
+          {
+            "timestamp": "2025-05-15T02:00:00Z",
+            "read": 18385,
+            "write": 12870
+          },
+          {
+            "timestamp": "2025-05-15T03:00:00Z",
+            "read": 5663,
+            "write": 3964
+          },
+          {
+            "timestamp": "2025-05-15T04:00:00Z",
+            "read": 18622,
+            "write": 13035
+          },
+          {
+            "timestamp": "2025-05-15T05:00:00Z",
+            "read": 7790,
+            "write": 5453
+          },
+          {
+            "timestamp": "2025-05-15T06:00:00Z",
+            "read": 13097,
+            "write": 9168
+          },
+          {
+            "timestamp": "2025-05-15T07:00:00Z",
+            "read": 9002,
+            "write": 6301
+          },
+          {
+            "timestamp": "2025-05-15T08:00:00Z",
+            "read": 17820,
+            "write": 12474
+          },
+          {
+            "timestamp": "2025-05-15T09:00:00Z",
+            "read": 12061,
+            "write": 8443
+          },
+          {
+            "timestamp": "2025-05-15T10:00:00Z",
+            "read": 12863,
+            "write": 9004
+          },
+          {
+            "timestamp": "2025-05-15T11:00:00Z",
+            "read": 12847,
+            "write": 8993
+          },
+          {
+            "timestamp": "2025-05-15T12:00:00Z",
+            "read": 6258,
+            "write": 4381
+          },
+          {
+            "timestamp": "2025-05-15T13:00:00Z",
+            "read": 13587,
+            "write": 9511
+          },
+          {
+            "timestamp": "2025-05-15T14:00:00Z",
+            "read": 10844,
+            "write": 7591
+          },
+          {
+            "timestamp": "2025-05-15T15:00:00Z",
+            "read": 103866,
+            "write": 72706
+          },
+          {
+            "timestamp": "2025-05-15T16:00:00Z",
+            "read": 13973,
+            "write": 9781
+          },
+          {
+            "timestamp": "2025-05-15T17:00:00Z",
+            "read": 9125,
+            "write": 6388
+          },
+          {
+            "timestamp": "2025-05-15T18:00:00Z",
+            "read": 16627,
+            "write": 11639
+          },
+          {
+            "timestamp": "2025-05-15T19:00:00Z",
+            "read": 15002,
+            "write": 10501
+          },
+          {
+            "timestamp": "2025-05-16T00:00:00Z",
+            "read": 15264,
+            "write": 10685
+          },
+          {
+            "timestamp": "2025-05-16T01:00:00Z",
+            "read": 13264,
+            "write": 9285
+          },
+          {
+            "timestamp": "2025-05-16T02:00:00Z",
+            "read": 17582,
+            "write": 12307
+          },
+          {
+            "timestamp": "2025-05-16T03:00:00Z",
+            "read": 14529,
+            "write": 10170
+          },
+          {
+            "timestamp": "2025-05-16T04:00:00Z",
+            "read": 6793,
+            "write": 4755
+          },
+          {
+            "timestamp": "2025-05-16T05:00:00Z",
+            "read": 15613,
+            "write": 10929
+          },
+          {
+            "timestamp": "2025-05-16T06:00:00Z",
+            "read": 13952,
+            "write": 9766
+          },
+          {
+            "timestamp": "2025-05-16T07:00:00Z",
+            "read": 17789,
+            "write": 12452
+          },
+          {
+            "timestamp": "2025-05-16T08:00:00Z",
+            "read": 11762,
+            "write": 8233
+          },
+          {
+            "timestamp": "2025-05-16T09:00:00Z",
+            "read": 11536,
+            "write": 8075
+          },
+          {
+            "timestamp": "2025-05-16T10:00:00Z",
+            "read": 5754,
+            "write": 4028
+          },
+          {
+            "timestamp": "2025-05-16T11:00:00Z",
+            "read": 8471,
+            "write": 5929
+          },
+          {
+            "timestamp": "2025-05-16T12:00:00Z",
+            "read": 11840,
+            "write": 8288
+          },
+          {
+            "timestamp": "2025-05-16T13:00:00Z",
+            "read": 92443,
+            "write": 64710
+          },
+          {
+            "timestamp": "2025-05-16T14:00:00Z",
+            "read": 7478,
+            "write": 5235
+          },
+          {
+            "timestamp": "2025-05-16T15:00:00Z",
+            "read": 7145,
+            "write": 5001
+          },
+          {
+            "timestamp": "2025-05-16T16:00:00Z",
+            "read": 6723,
+            "write": 4706
+          },
+          {
+            "timestamp": "2025-05-16T17:00:00Z",
+            "read": 15586,
+            "write": 10910
+          },
+          {
+            "timestamp": "2025-05-16T18:00:00Z",
+            "read": 9418,
+            "write": 6593
+          },
+          {
+            "timestamp": "2025-05-16T19:00:00Z",
+            "read": 12911,
+            "write": 9038
+          },
+          {
+            "timestamp": "2025-05-17T00:00:00Z",
+            "read": 9894,
+            "write": 6926
+          },
+          {
+            "timestamp": "2025-05-17T01:00:00Z",
+            "read": 6940,
+            "write": 4858
+          },
+          {
+            "timestamp": "2025-05-17T02:00:00Z",
+            "read": 14382,
+            "write": 10067
+          },
+          {
+            "timestamp": "2025-05-17T03:00:00Z",
+            "read": 5541,
+            "write": 3879
+          },
+          {
+            "timestamp": "2025-05-17T04:00:00Z",
+            "read": 9696,
+            "write": 6787
+          },
+          {
+            "timestamp": "2025-05-17T05:00:00Z",
+            "read": 17648,
+            "write": 12354
+          },
+          {
+            "timestamp": "2025-05-17T06:00:00Z",
+            "read": 5528,
+            "write": 3870
+          },
+          {
+            "timestamp": "2025-05-17T07:00:00Z",
+            "read": 8383,
+            "write": 5868
+          },
+          {
+            "timestamp": "2025-05-17T08:00:00Z",
+            "read": 13756,
+            "write": 9629
+          },
+          {
+            "timestamp": "2025-05-17T09:00:00Z",
+            "read": 16889,
+            "write": 11822
+          },
+          {
+            "timestamp": "2025-05-17T10:00:00Z",
+            "read": 8027,
+            "write": 5619
+          },
+          {
+            "timestamp": "2025-05-17T11:00:00Z",
+            "read": 5290,
+            "write": 3703
+          },
+          {
+            "timestamp": "2025-05-17T12:00:00Z",
+            "read": 6849,
+            "write": 4794
+          },
+          {
+            "timestamp": "2025-05-17T13:00:00Z",
+            "read": 17663,
+            "write": 12364
+          },
+          {
+            "timestamp": "2025-05-17T14:00:00Z",
+            "read": 100895,
+            "write": 70627
+          },
+          {
+            "timestamp": "2025-05-17T15:00:00Z",
+            "read": 14398,
+            "write": 10079
+          },
+          {
+            "timestamp": "2025-05-17T16:00:00Z",
+            "read": 16252,
+            "write": 11377
+          },
+          {
+            "timestamp": "2025-05-17T17:00:00Z",
+            "read": 19188,
+            "write": 13432
+          },
+          {
+            "timestamp": "2025-05-17T18:00:00Z",
+            "read": 11265,
+            "write": 7886
+          },
+          {
+            "timestamp": "2025-05-17T19:00:00Z",
+            "read": 7920,
+            "write": 5544
+          },
+          {
+            "timestamp": "2025-05-18T00:00:00Z",
+            "read": 15022,
+            "write": 10515
+          },
+          {
+            "timestamp": "2025-05-18T01:00:00Z",
+            "read": 5830,
+            "write": 4081
+          },
+          {
+            "timestamp": "2025-05-18T02:00:00Z",
+            "read": 18117,
+            "write": 12682
+          },
+          {
+            "timestamp": "2025-05-18T03:00:00Z",
+            "read": 19939,
+            "write": 13957
+          },
+          {
+            "timestamp": "2025-05-18T04:00:00Z",
+            "read": 14790,
+            "write": 10353
+          },
+          {
+            "timestamp": "2025-05-18T05:00:00Z",
+            "read": 14555,
+            "write": 10189
+          },
+          {
+            "timestamp": "2025-05-18T06:00:00Z",
+            "read": 7378,
+            "write": 5165
+          },
+          {
+            "timestamp": "2025-05-18T07:00:00Z",
+            "read": 15551,
+            "write": 10886
+          },
+          {
+            "timestamp": "2025-05-18T08:00:00Z",
+            "read": 8544,
+            "write": 5981
+          },
+          {
+            "timestamp": "2025-05-18T09:00:00Z",
+            "read": 12898,
+            "write": 9029
+          },
+          {
+            "timestamp": "2025-05-18T10:00:00Z",
+            "read": 16224,
+            "write": 11357
+          },
+          {
+            "timestamp": "2025-05-18T11:00:00Z",
+            "read": 16763,
+            "write": 11734
+          },
+          {
+            "timestamp": "2025-05-18T12:00:00Z",
+            "read": 17550,
+            "write": 12285
+          },
+          {
+            "timestamp": "2025-05-18T13:00:00Z",
+            "read": 6722,
+            "write": 4705
+          },
+          {
+            "timestamp": "2025-05-18T14:00:00Z",
+            "read": 105601,
+            "write": 31680
+          },
+          {
+            "timestamp": "2025-05-18T15:00:00Z",
+            "read": 14556,
+            "write": 10189
+          },
+          {
+            "timestamp": "2025-05-18T16:00:00Z",
+            "read": 12968,
+            "write": 9078
+          },
+          {
+            "timestamp": "2025-05-18T17:00:00Z",
+            "read": 8162,
+            "write": 5713
+          },
+          {
+            "timestamp": "2025-05-18T18:00:00Z",
+            "read": 18128,
+            "write": 12690
+          },
+          {
+            "timestamp": "2025-05-18T19:00:00Z",
+            "read": 19875,
+            "write": 13913
+          },
+          {
+            "timestamp": "2025-05-19T00:00:00Z",
+            "read": 17641,
+            "write": 7056
+          },
+          {
+            "timestamp": "2025-05-19T01:00:00Z",
+            "read": 9485,
+            "write": 6639
+          },
+          {
+            "timestamp": "2025-05-19T02:00:00Z",
+            "read": 18429,
+            "write": 12900
+          },
+          {
+            "timestamp": "2025-05-19T03:00:00Z",
+            "read": 16711,
+            "write": 11698
+          },
+          {
+            "timestamp": "2025-05-19T04:00:00Z",
+            "read": 13743,
+            "write": 9620
+          },
+          {
+            "timestamp": "2025-05-19T05:00:00Z",
+            "read": 7060,
+            "write": 4942
+          },
+          {
+            "timestamp": "2025-05-19T06:00:00Z",
+            "read": 18290,
+            "write": 12803
+          },
+          {
+            "timestamp": "2025-05-19T07:00:00Z",
+            "read": 96782,
+            "write": 67747
+          },
+          {
+            "timestamp": "2025-05-19T08:00:00Z",
+            "read": 7909,
+            "write": 5536
+          },
+          {
+            "timestamp": "2025-05-19T09:00:00Z",
+            "read": 10951,
+            "write": 7666
+          },
+          {
+            "timestamp": "2025-05-19T10:00:00Z",
+            "read": 5792,
+            "write": 4054
+          },
+          {
+            "timestamp": "2025-05-19T11:00:00Z",
+            "read": 17711,
+            "write": 12398
+          },
+          {
+            "timestamp": "2025-05-19T12:00:00Z",
+            "read": 5925,
+            "write": 4148
+          },
+          {
+            "timestamp": "2025-05-19T13:00:00Z",
+            "read": 5206,
+            "write": 3644
+          },
+          {
+            "timestamp": "2025-05-19T14:00:00Z",
+            "read": 10535,
+            "write": 7375
+          },
+          {
+            "timestamp": "2025-05-19T15:00:00Z",
+            "read": 19457,
+            "write": 13620
+          },
+          {
+            "timestamp": "2025-05-19T16:00:00Z",
+            "read": 9274,
+            "write": 6492
+          },
+          {
+            "timestamp": "2025-05-19T17:00:00Z",
+            "read": 10310,
+            "write": 7217
+          },
+          {
+            "timestamp": "2025-05-19T18:00:00Z",
+            "read": 15486,
+            "write": 10840
+          },
+          {
+            "timestamp": "2025-05-19T19:00:00Z",
+            "read": 15599,
+            "write": 10919
+          }
+        ],
+        "throughput": [
+          {
+            "timestamp": "2025-05-15T00:00:00Z",
+            "read": 533,
+            "write": 426
+          },
+          {
+            "timestamp": "2025-05-15T01:00:00Z",
+            "read": 789,
+            "write": 631
+          },
+          {
+            "timestamp": "2025-05-15T02:00:00Z",
+            "read": 765,
+            "write": 612
+          },
+          {
+            "timestamp": "2025-05-15T03:00:00Z",
+            "read": 703,
+            "write": 562
+          },
+          {
+            "timestamp": "2025-05-15T04:00:00Z",
+            "read": 562,
+            "write": 450
+          },
+          {
+            "timestamp": "2025-05-15T05:00:00Z",
+            "read": 577,
+            "write": 462
+          },
+          {
+            "timestamp": "2025-05-15T06:00:00Z",
+            "read": 584,
+            "write": 467
+          },
+          {
+            "timestamp": "2025-05-15T07:00:00Z",
+            "read": 678,
+            "write": 542
+          },
+          {
+            "timestamp": "2025-05-15T08:00:00Z",
+            "read": 709,
+            "write": 567
+          },
+          {
+            "timestamp": "2025-05-15T09:00:00Z",
+            "read": 772,
+            "write": 618
+          },
+          {
+            "timestamp": "2025-05-15T10:00:00Z",
+            "read": 788,
+            "write": 630
+          },
+          {
+            "timestamp": "2025-05-15T11:00:00Z",
+            "read": 458,
+            "write": 366
+          },
+          {
+            "timestamp": "2025-05-15T12:00:00Z",
+            "read": 573,
+            "write": 458
+          },
+          {
+            "timestamp": "2025-05-15T13:00:00Z",
+            "read": 789,
+            "write": 631
+          },
+          {
+            "timestamp": "2025-05-15T14:00:00Z",
+            "read": 452,
+            "write": 362
+          },
+          {
+            "timestamp": "2025-05-15T15:00:00Z",
+            "read": 1750,
+            "write": 1400
+          },
+          {
+            "timestamp": "2025-05-15T16:00:00Z",
+            "read": 534,
+            "write": 427
+          },
+          {
+            "timestamp": "2025-05-15T17:00:00Z",
+            "read": 329,
+            "write": 263
+          },
+          {
+            "timestamp": "2025-05-15T18:00:00Z",
+            "read": 560,
+            "write": 448
+          },
+          {
+            "timestamp": "2025-05-15T19:00:00Z",
+            "read": 576,
+            "write": 461
+          },
+          {
+            "timestamp": "2025-05-16T00:00:00Z",
+            "read": 279,
+            "write": 223
+          },
+          {
+            "timestamp": "2025-05-16T01:00:00Z",
+            "read": 511,
+            "write": 409
+          },
+          {
+            "timestamp": "2025-05-16T02:00:00Z",
+            "read": 739,
+            "write": 591
+          },
+          {
+            "timestamp": "2025-05-16T03:00:00Z",
+            "read": 718,
+            "write": 574
+          },
+          {
+            "timestamp": "2025-05-16T04:00:00Z",
+            "read": 228,
+            "write": 182
+          },
+          {
+            "timestamp": "2025-05-16T05:00:00Z",
+            "read": 242,
+            "write": 194
+          },
+          {
+            "timestamp": "2025-05-16T06:00:00Z",
+            "read": 362,
+            "write": 290
+          },
+          {
+            "timestamp": "2025-05-16T07:00:00Z",
+            "read": 613,
+            "write": 490
+          },
+          {
+            "timestamp": "2025-05-16T08:00:00Z",
+            "read": 608,
+            "write": 486
+          },
+          {
+            "timestamp": "2025-05-16T09:00:00Z",
+            "read": 236,
+            "write": 189
+          },
+          {
+            "timestamp": "2025-05-16T10:00:00Z",
+            "read": 789,
+            "write": 631
+          },
+          {
+            "timestamp": "2025-05-16T11:00:00Z",
+            "read": 336,
+            "write": 269
+          },
+          {
+            "timestamp": "2025-05-16T12:00:00Z",
+            "read": 713,
+            "write": 570
+          },
+          {
+            "timestamp": "2025-05-16T13:00:00Z",
+            "read": 2374,
+            "write": 1899
+          },
+          {
+            "timestamp": "2025-05-16T14:00:00Z",
+            "read": 730,
+            "write": 584
+          },
+          {
+            "timestamp": "2025-05-16T15:00:00Z",
+            "read": 405,
+            "write": 324
+          },
+          {
+            "timestamp": "2025-05-16T16:00:00Z",
+            "read": 661,
+            "write": 529
+          },
+          {
+            "timestamp": "2025-05-16T17:00:00Z",
+            "read": 686,
+            "write": 549
+          },
+          {
+            "timestamp": "2025-05-16T18:00:00Z",
+            "read": 582,
+            "write": 466
+          },
+          {
+            "timestamp": "2025-05-16T19:00:00Z",
+            "read": 230,
+            "write": 184
+          },
+          {
+            "timestamp": "2025-05-17T00:00:00Z",
+            "read": 549,
+            "write": 439
+          },
+          {
+            "timestamp": "2025-05-17T01:00:00Z",
+            "read": 288,
+            "write": 230
+          },
+          {
+            "timestamp": "2025-05-17T02:00:00Z",
+            "read": 561,
+            "write": 449
+          },
+          {
+            "timestamp": "2025-05-17T03:00:00Z",
+            "read": 288,
+            "write": 230
+          },
+          {
+            "timestamp": "2025-05-17T04:00:00Z",
+            "read": 721,
+            "write": 577
+          },
+          {
+            "timestamp": "2025-05-17T05:00:00Z",
+            "read": 290,
+            "write": 232
+          },
+          {
+            "timestamp": "2025-05-17T06:00:00Z",
+            "read": 753,
+            "write": 602
+          },
+          {
+            "timestamp": "2025-05-17T07:00:00Z",
+            "read": 351,
+            "write": 281
+          },
+          {
+            "timestamp": "2025-05-17T08:00:00Z",
+            "read": 777,
+            "write": 622
+          },
+          {
+            "timestamp": "2025-05-17T09:00:00Z",
+            "read": 324,
+            "write": 259
+          },
+          {
+            "timestamp": "2025-05-17T10:00:00Z",
+            "read": 570,
+            "write": 456
+          },
+          {
+            "timestamp": "2025-05-17T11:00:00Z",
+            "read": 784,
+            "write": 627
+          },
+          {
+            "timestamp": "2025-05-17T12:00:00Z",
+            "read": 441,
+            "write": 353
+          },
+          {
+            "timestamp": "2025-05-17T13:00:00Z",
+            "read": 442,
+            "write": 354
+          },
+          {
+            "timestamp": "2025-05-17T14:00:00Z",
+            "read": 2077,
+            "write": 1662
+          },
+          {
+            "timestamp": "2025-05-17T15:00:00Z",
+            "read": 423,
+            "write": 338
+          },
+          {
+            "timestamp": "2025-05-17T16:00:00Z",
+            "read": 317,
+            "write": 254
+          },
+          {
+            "timestamp": "2025-05-17T17:00:00Z",
+            "read": 545,
+            "write": 436
+          },
+          {
+            "timestamp": "2025-05-17T18:00:00Z",
+            "read": 759,
+            "write": 607
+          },
+          {
+            "timestamp": "2025-05-17T19:00:00Z",
+            "read": 751,
+            "write": 601
+          },
+          {
+            "timestamp": "2025-05-18T00:00:00Z",
+            "read": 388,
+            "write": 310
+          },
+          {
+            "timestamp": "2025-05-18T01:00:00Z",
+            "read": 338,
+            "write": 270
+          },
+          {
+            "timestamp": "2025-05-18T02:00:00Z",
+            "read": 760,
+            "write": 608
+          },
+          {
+            "timestamp": "2025-05-18T03:00:00Z",
+            "read": 748,
+            "write": 598
+          },
+          {
+            "timestamp": "2025-05-18T04:00:00Z",
+            "read": 475,
+            "write": 380
+          },
+          {
+            "timestamp": "2025-05-18T05:00:00Z",
+            "read": 507,
+            "write": 406
+          },
+          {
+            "timestamp": "2025-05-18T06:00:00Z",
+            "read": 278,
+            "write": 222
+          },
+          {
+            "timestamp": "2025-05-18T07:00:00Z",
+            "read": 307,
+            "write": 246
+          },
+          {
+            "timestamp": "2025-05-18T08:00:00Z",
+            "read": 370,
+            "write": 296
+          },
+          {
+            "timestamp": "2025-05-18T09:00:00Z",
+            "read": 670,
+            "write": 536
+          },
+          {
+            "timestamp": "2025-05-18T10:00:00Z",
+            "read": 389,
+            "write": 311
+          },
+          {
+            "timestamp": "2025-05-18T11:00:00Z",
+            "read": 570,
+            "write": 456
+          },
+          {
+            "timestamp": "2025-05-18T12:00:00Z",
+            "read": 243,
+            "write": 194
+          },
+          {
+            "timestamp": "2025-05-18T13:00:00Z",
+            "read": 636,
+            "write": 509
+          },
+          {
+            "timestamp": "2025-05-18T14:00:00Z",
+            "read": 1816,
+            "write": 1453
+          },
+          {
+            "timestamp": "2025-05-18T15:00:00Z",
+            "read": 410,
+            "write": 328
+          },
+          {
+            "timestamp": "2025-05-18T16:00:00Z",
+            "read": 221,
+            "write": 177
+          },
+          {
+            "timestamp": "2025-05-18T17:00:00Z",
+            "read": 298,
+            "write": 238
+          },
+          {
+            "timestamp": "2025-05-18T18:00:00Z",
+            "read": 536,
+            "write": 429
+          },
+          {
+            "timestamp": "2025-05-18T19:00:00Z",
+            "read": 276,
+            "write": 221
+          },
+          {
+            "timestamp": "2025-05-19T00:00:00Z",
+            "read": 545,
+            "write": 436
+          },
+          {
+            "timestamp": "2025-05-19T01:00:00Z",
+            "read": 545,
+            "write": 436
+          },
+          {
+            "timestamp": "2025-05-19T02:00:00Z",
+            "read": 209,
+            "write": 167
+          },
+          {
+            "timestamp": "2025-05-19T03:00:00Z",
+            "read": 423,
+            "write": 338
+          },
+          {
+            "timestamp": "2025-05-19T04:00:00Z",
+            "read": 278,
+            "write": 222
+          },
+          {
+            "timestamp": "2025-05-19T05:00:00Z",
+            "read": 259,
+            "write": 207
+          },
+          {
+            "timestamp": "2025-05-19T06:00:00Z",
+            "read": 768,
+            "write": 614
+          },
+          {
+            "timestamp": "2025-05-19T07:00:00Z",
+            "read": 1746,
+            "write": 1397
+          },
+          {
+            "timestamp": "2025-05-19T08:00:00Z",
+            "read": 462,
+            "write": 370
+          },
+          {
+            "timestamp": "2025-05-19T09:00:00Z",
+            "read": 734,
+            "write": 587
+          },
+          {
+            "timestamp": "2025-05-19T10:00:00Z",
+            "read": 457,
+            "write": 366
+          },
+          {
+            "timestamp": "2025-05-19T11:00:00Z",
+            "read": 371,
+            "write": 297
+          },
+          {
+            "timestamp": "2025-05-19T12:00:00Z",
+            "read": 291,
+            "write": 233
+          },
+          {
+            "timestamp": "2025-05-19T13:00:00Z",
+            "read": 650,
+            "write": 520
+          },
+          {
+            "timestamp": "2025-05-19T14:00:00Z",
+            "read": 461,
+            "write": 369
+          },
+          {
+            "timestamp": "2025-05-19T15:00:00Z",
+            "read": 773,
+            "write": 618
+          },
+          {
+            "timestamp": "2025-05-19T16:00:00Z",
+            "read": 452,
+            "write": 362
+          },
+          {
+            "timestamp": "2025-05-19T17:00:00Z",
+            "read": 606,
+            "write": 485
+          },
+          {
+            "timestamp": "2025-05-19T18:00:00Z",
+            "read": 411,
+            "write": 329
+          },
+          {
+            "timestamp": "2025-05-19T19:00:00Z",
+            "read": 726,
+            "write": 581
+          }
+        ]
+      },
+      "snapshotPolicy": {
+        "policyName": "Project-policy2",
+        "applyToDirectory": "production/projectL",
+        "frequency": "daily",
+        "time": "05:00",
+        "deleteAfterDays": 0,
+        "enabled": true,
+        "locking": false,
+        "days": [
+          "Every day"
+        ]
       }
     }
   ]

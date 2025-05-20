@@ -13,6 +13,15 @@ export default class ClustersController {
     }
   }
 
+  public async getClusters({ params, response }: HttpContextContract) {
+    try {
+      const data = await ClusterService.getClusters()
+      return response.ok(data)
+    } catch (error) {
+      return handleError(error, response)
+    }
+  }
+
   public async getPolicy({ params, response }: HttpContextContract) {
     try {
       const policy = await ClusterService.getPolicy(params.id)
@@ -25,8 +34,8 @@ export default class ClustersController {
   public async updatePolicy({ params, request, response }: HttpContextContract) {
     try {
       const payload = await request.validate(UpdatePolicyValidator)
-      await ClusterService.updatePolicy(params.id, payload)
-      return response.ok({ message: 'Policy updated successfully' })
+      const resp = await ClusterService.updatePolicy(params.id, payload)
+      return response.ok({ message: 'Policy updated successfully', data: resp })
     } catch (error) {
       return handleError(error, response)
     }

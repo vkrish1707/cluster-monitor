@@ -6,3 +6,43 @@ body {
   color: #ededed;
   font-family: 'Nunito', sans-serif;
 }
+.input-eui {
+  background: #2f373f;
+  color: #fff;
+  border: 1px solid #424b53;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.input-eui:focus {
+  border-color: #00d3f2;
+}
+.input-eui-disabled,
+.input-eui[disabled] {
+  background: #333c44;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+.policy-form-eui,
+.policy-form-eui label,
+.policy-form-eui input,
+.policy-form-eui select,
+.policy-form-eui button,
+.policy-form-eui textarea,
+.policy-form-eui span,
+.policy-form-eui .input-eui {
+  font-size: 18px !important;
+  color: #c7cacc !important;
+}
+
+.policy-form-eui input::placeholder,
+.policy-form-eui textarea::placeholder {
+  font-size: 18px !important;
+}
+
+.policy-form-eui label,
+.policy-form-eui .col-span-1,
+.policy-form-eui h3 {
+  font-size: 18px !important;
+}
