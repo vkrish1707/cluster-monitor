@@ -101,8 +101,6 @@ cluster-monitor/
 
 ## 💡 Room for Improvement
 
-Here are some ideas and suggestions for further enhancement of the Cluster Monitor project:
-
 - **User Authentication & RBAC:** Add secure user authentication and role-based access control for multi-user environments.
 - **Database Integration:** Replace JSON file storage with a robust database (e.g., PostgreSQL, MongoDB) for scalability and persistence.
 - **Live WebSocket Updates:** Implement WebSocket or Server-Sent Events for real-time streaming of metrics and anomaly alerts.
@@ -115,4 +113,5 @@ Here are some ideas and suggestions for further enhancement of the Cluster Monit
 - **Theme Customization:** Allow users to switch between dark/light themes or customize the dashboard appearance.
 - **Accessibility Improvements:** Enhance ARIA roles, keyboard navigation, and color contrast for WCAG compliance.
 
----
+---![Screenshot 2025-05-20 at 1 52 10 AM](https://github.com/user-attachments/assets/7cd130b1-3ffb-41c4-94d0-f1f16de79370)
+![Screenshot 2025-05-20 at 1 50 58 AM](https://github.com/user-attachments/assets/1c688609-ace3-432f-b833-19a4488c532e)
