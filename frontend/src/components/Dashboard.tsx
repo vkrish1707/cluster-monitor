@@ -3,7 +3,7 @@
 import api from '@/lib/api';
 // Context hook to access cluster ID
 import { useCluster } from '@/context/ClusterContext';
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 interface DashboardProps {
     clusterId: string;

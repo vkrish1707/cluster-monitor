@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header'
 import api from '@/lib/api'

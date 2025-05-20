@@ -1016,15 +1016,16 @@
       "snapshotPolicy": {
         "policyName": "Project Zeus",
         "applyToDirectory": "production/project-Z",
-        "frequency": "weekly",
+        "frequency": "daily",
         "time": "05:00",
-        "deleteAfterDays": 92,
+        "deleteAfterDays": 0,
         "enabled": true,
-        "locking": true,
+        "locking": false,
         "days": [
           "Tue",
           "Wed",
-          "Thu"
+          "Thu",
+          "Fri"
         ]
       }
     },
