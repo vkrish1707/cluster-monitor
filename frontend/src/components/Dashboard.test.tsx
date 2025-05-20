@@ -1,61 +1,61 @@
 import React from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
 import Dashboard from './Dashboard'
+import '@testing-library/jest-dom'
 
-// Mock the context and API call
+// 1. Mock useCluster
 jest.mock('@/context/ClusterContext', () => ({
-  useCluster: () => ({ clusterId: 'test-cluster-id' })
+  useCluster: () => ({ clusterId: 'test-cluster-id' }),
 }))
 
+// 2. Mock api.get
+const mockApiGet = jest.fn()
 jest.mock('@/lib/api', () => ({
-  get: jest.fn(() =>
-    Promise.resolve({
-      data: {
-        matrix: {
-          iops: [{ timestamp: '2025-05-15T00:00:00Z', read: 100, write: 80 }],
-          throughput: [{ timestamp: '2025-05-15T00:00:00Z', read: 200, write: 160 }],
-          readIOP: 100,
-          writeIOP: 80,
-          readThroughput: 200,
-          writeThroughput: 160
-        }
-      }
-    })
-  )
+  get: (...args: unknown[]) => mockApiGet(...args),
 }))
 
-// If your IOPSGraph/ThroughputGraph files don't exist, comment these lines out
-// jest.mock('./IOPSGraph', () => () => <div data-testid="iops-graph">IOPS Graph</div>)
-// jest.mock('./ThroughputGraph', () => () => <div data-testid="throughput-graph">Throughput Graph</div>)
+const mockApiResponse = {
+  iops: [
+    { timestamp: '2024-05-20T00:00:00Z', read: 100, write: 80 },
+    { timestamp: '2024-05-21T00:00:00Z', read: 110, write: 90 },
+  ],
+  throughput: [
+    { read: 200, write: 150 },
+    { read: 210, write: 160 },
+  ],
+  readIOP: 100,
+  writeIOP: 80,
+  readThroughput: 200,
+  writeThroughput: 150,
+};
 
 describe('Dashboard', () => {
-  it('shows loading initially', () => {
-    render(<Dashboard />)
-    expect(screen.getByText(/loading matrix/i)).toBeInTheDocument()
+  beforeEach(() => {
+    // Reset mocks and resolve the api.get with our data
+    mockApiGet.mockReset()
+    mockApiGet.mockResolvedValue({ data: mockApiResponse })
   })
 
-  it('renders the graphs after load', async () => {
-    render(<Dashboard />);
-    // Wait for any UI change after state update (like a div, or text)
-    expect(await screen.findByText(/Performance Metrics/i)).toBeInTheDocument();
-  });
-
-  it('shows correct average values', async () => {
+  it('renders loading state and then shows the metrics', async () => {
     render(<Dashboard />)
-    await waitFor(() => {
-      expect(screen.getByText(/100/)).toBeInTheDocument()  // readIOP
-      expect(screen.getByText(/80/)).toBeInTheDocument()   // writeIOP
-      expect(screen.getByText(/200/)).toBeInTheDocument()  // readThroughput
-      expect(screen.getByText(/160/)).toBeInTheDocument()  // writeThroughput
-    })
+    // Initial loading
+    expect(screen.getByText(/loading metrics/i)).toBeInTheDocument()
+
+    // Wait for the title (means data loaded)
+    expect(await screen.findByText(/performance metrics/i)).toBeInTheDocument()
+
+    // Check that values are rendered from our mock data
+    expect(screen.getByText('100')).toBeInTheDocument() // readIOP
+    expect(screen.getByText('80')).toBeInTheDocument()  // writeIOP
+    expect(screen.getByText('200')).toBeInTheDocument() // readThroughput
+    expect(screen.getByText('150')).toBeInTheDocument() // writeThroughput
   })
 
-  it('renders the legend', async () => {
+  it('shows error message if API fails', async () => {
+    mockApiGet.mockRejectedValueOnce(new Error('Test error'))
     render(<Dashboard />)
-    expect(await screen.findByText(/anomaly pointers/i)).toBeInTheDocument()
-  })
-
-  it('renders without crashing', () => {
-    expect(() => render(<Dashboard />)).not.toThrow()
+    expect(screen.getByText(/loading metrics/i)).toBeInTheDocument()
+    expect(await screen.findByText(/error/i)).toBeInTheDocument()
+    expect(screen.getByText(/test error/i)).toBeInTheDocument()
   })
 })

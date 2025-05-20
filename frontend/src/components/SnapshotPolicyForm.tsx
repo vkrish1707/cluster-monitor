@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import api from '../lib/api'
 import { useCluster } from '@/context/ClusterContext';
 import { QuestionMarkCircleIcon } from '@heroicons/react/20/solid'
@@ -8,6 +8,16 @@ const WEEKDAYS = ['Every day', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 export default function SnapshotPolicyForm() {
   const [enabled, setEnabled] = useState(true)
   const [locking, setLocking] = useState(false)
+  const [initialFormData, setInitialFormData] = useState({
+    policyName: '',
+    applyToDirectory: '',
+    scheduleType: '',
+    timeZone: '',
+    snapshotHour: '',
+    snapshotMinute: '',
+    days: [] as string[],
+    deleteAfter: '',
+  });
   const { clusterId } = useCluster();
     const [deletePeriodUnit, setDeletePeriodUnit] = useState<'days' | 'weeks' | 'months'>('days')
   const [formData, setFormData] = useState({
@@ -37,7 +47,7 @@ export default function SnapshotPolicyForm() {
         if (policy?.time) {
           [hour, min] = policy.time.split(':');
         }
-        setFormData({
+        const data = {
           policyName: policy?.policyName || '',
           applyToDirectory: policy?.applyToDirectory || '',
           scheduleType: policy?.frequency || 'daily',
@@ -46,7 +56,9 @@ export default function SnapshotPolicyForm() {
           snapshotMinute: min,
           days: policy?.days || [],
           deleteAfter: policy?.deleteAfterDays?.toString() || '99',
-        })
+        }
+        setFormData(data)
+        setInitialFormData(data)
         setEnabled(policy?.enabled ?? true)
         setLocking(policy?.locking ?? false)
       })
@@ -113,8 +125,7 @@ export default function SnapshotPolicyForm() {
         days: formData.days,
       }
     })
-      .then((resp) => {
-        console.log('Policy saved successfully')
+      .then(() => {
       })
       .catch(err => {
         console.error('Failed to save policy', err)
@@ -130,8 +141,9 @@ export default function SnapshotPolicyForm() {
 
         <div className="space-y-4">
           <div>
-            <label className="block mb-1 text-[#c7cacc]">Policy Name</label>
+            <label htmlFor="policyName" className="block mb-1 text-[#c7cacc]">Policy Name</label>
             <input
+              id="policyName"
               type="text"
               className="input-eui w-full max-w-md"
               value={formData.policyName}
@@ -139,12 +151,13 @@ export default function SnapshotPolicyForm() {
             />
           </div>
           <div >
-            <label className="block mb-1 rounded-r text-[#c7cacc]">Apply to Directory</label>
+            <label htmlFor="applyToDirectory" className="block mb-1 rounded-r text-[#c7cacc]">Apply to Directory</label>
             <div className="flex max-w-md">
               <span className="flex items-center px-3 bg-[#23272f] text-gray-300 rounded-l border border-[#424b53] border-r-0 h-10">
                 /
               </span>
               <input
+                id="applyToDirectory"
                 type="text"
                 className="input-eui w-full h-10 border border-[#424b53] rounded-r focus:outline-none bg-[#23272f] text-white placeholder-gray-400"
                 style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
@@ -157,9 +170,12 @@ export default function SnapshotPolicyForm() {
         </div>
         <label className="block mb-1 text-[#c7cacc]">Run Policy on the Following Schedule</label>
         <div className="bg-[#2f373f] p-6 rounded grid grid-cols-5 gap-4 items-start">
-          <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">Select Schedule Type</div>
+          <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">
+            <label htmlFor="scheduleType">Select Schedule Type</label>
+          </div>
           <div className="col-span-4">
             <select
+              id="scheduleType"
               className="input-eui w-full max-w-xs"
               value={formData.scheduleType}
               onChange={e => handleChange('scheduleType', e.target.value)}
@@ -169,7 +185,9 @@ export default function SnapshotPolicyForm() {
             </select>
           </div>
 
-          <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">Set to Time Zone</div>
+          <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">
+            Set to Time Zone
+          </div>
           <div className="col-span-4">
             <div className="flex items-center gap-2 text-gray-300">
               <span>{formData.timeZone}</span>
@@ -179,9 +197,12 @@ export default function SnapshotPolicyForm() {
             </div>
           </div>
 
-          <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">Take a Snapshot at</div>
+          <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">
+            <label htmlFor="snapshotHour">Take a Snapshot at</label>
+          </div>
           <div className="col-span-4 flex items-center gap-2">
             <input
+              id="snapshotHour"
               type="number"
               value={formData.snapshotHour}
               min="00"
@@ -190,7 +211,9 @@ export default function SnapshotPolicyForm() {
               onChange={e => handleTimeChange('snapshotHour', e.target.value.padStart(2, '0'))}
             />
             <span className="text-white">:</span>
+            <label htmlFor="snapshotMinute" className="sr-only">Minute</label>
             <input
+              id="snapshotMinute"
               type="number"
               value={formData.snapshotMinute}
               min="00"
@@ -207,9 +230,12 @@ export default function SnapshotPolicyForm() {
                 // "Every day" logic
                 const isEveryDay = idx === 0;
                 const everyDaySelected = formData.days.includes('Every day');
+                // id for checkbox
+                const checkboxId = `day-${day.replace(/\s+/g, '')}`;
                 return (
-                  <label key={day} className="flex items-center gap-1 text-gray-300">
+                  <label key={day} htmlFor={checkboxId} className="flex items-center gap-1 text-gray-300">
                     <input
+                      id={checkboxId}
                       type="checkbox"
                       className="accent-blue-500"
                       checked={formData.days.includes(day)}
@@ -225,8 +251,9 @@ export default function SnapshotPolicyForm() {
 
           <div className="col-span-1 text-right text-[#c7cacc] flex justify-end items-center h-full">Delete Each Snapshot</div>
           <div className="col-span-4 flex flex-wrap items-center gap-4">
-            <label className="flex items-center gap-2 text-gray-300">
+            <label htmlFor="deleteNever" className="flex items-center gap-2 text-gray-300">
               <input
+                id="deleteNever"
                 type="radio"
                 name="delete"
                 checked={formData.deleteAfter === '0'}
@@ -234,8 +261,9 @@ export default function SnapshotPolicyForm() {
               />
               <span>Never</span>
             </label>
-            <label className="flex items-center gap-2 text-gray-300">
+            <label htmlFor="deleteAfter" className="flex items-center gap-2 text-gray-300">
               <input
+                id="deleteAfter"
                 type="radio"
                 name="delete"
                 checked={formData.deleteAfter !== '0'}
@@ -243,6 +271,7 @@ export default function SnapshotPolicyForm() {
               />
               <span>Automatically after</span>
               <input
+                id="deleteAfterInput"
                 type="number"
                 className={`input-eui w-16 ${formData.deleteAfter === '0' ? 'input-eui-disabled' : ''}`}
                 value={formData.deleteAfter === '0' ? '99' : formData.deleteAfter}
@@ -251,6 +280,7 @@ export default function SnapshotPolicyForm() {
                 min={1}
               />
               <select
+                id="deletePeriodUnit"
                 className={`input-eui ml-1 rounded px-2 py-1 ${formData.deleteAfter === '0' ? 'input-eui-disabled' : ''}`}
                 value={deletePeriodUnit}
                 onChange={e => setDeletePeriodUnit(e.target.value as 'days' | 'weeks' | 'months')}
@@ -260,22 +290,35 @@ export default function SnapshotPolicyForm() {
                 <option value="days">days</option>
                 <option value="weeks">weeks</option>
                 <option value="months">months</option>
-              </select>          </label>
+              </select>
+            </label>
           </div>
         </div>
 
         <div>
           <h3 className="text-sm font-medium text-white">Snapshot Locking</h3>
           <p className="text-[#a6aaae] text-[16px] mb-1">Locked snapshots cannot be deleted before the deletion schedule expires. For this feature to be available, snapshots must be set to automatically delete.</p>
-          <label className="flex items-center gap-2 text-gray-300">
-            <input className="accent-blue-500" type="checkbox" checked={!lockingDisabled && locking}
-              disabled={lockingDisabled} onChange={() => setLocking(!locking)} />
+          <label htmlFor="locking" className="flex items-center gap-2 text-gray-300">
+            <input
+              id="locking"
+              className="accent-blue-500"
+              type="checkbox"
+              checked={!lockingDisabled && locking}
+              disabled={lockingDisabled}
+              onChange={() => setLocking(!locking)}
+            />
             <span>Enable locked snapshots</span>
           </label>
         </div>
 
-        <label className="flex items-center gap-2 text-gray-300">
-          <input className="accent-blue-500" type="checkbox" checked={enabled} onChange={() => setEnabled(!enabled)} />
+        <label htmlFor="enabled" className="flex items-center gap-2 text-gray-300">
+          <input
+            id="enabled"
+            className="accent-blue-500"
+            type="checkbox"
+            checked={enabled}
+            onChange={() => setEnabled(!enabled)}
+          />
           <span>Enable policy</span>
         </label>
 
@@ -283,7 +326,7 @@ export default function SnapshotPolicyForm() {
           <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
             Save Policy
           </button>
-          <button type="button" className="text-[#c7cacc] hover:underline">Cancel</button>
+          <button  onClick={() => setFormData(initialFormData)} type="button" className="text-[#c7cacc] hover:underline">Cancel</button>
         </div>
       </form>
     </div>
