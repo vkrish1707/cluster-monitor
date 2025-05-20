@@ -93,6 +93,26 @@ cluster-monitor/
 
 ---
 
+## Running Tests
+
+To execute test cases, you can run the following commands in the respective folders:
+
+- **Frontend:** Navigate to the frontend folder and run:
+  
+  ```bash
+  npm run test
+  ```
+
+- **Backend:** Navigate to the backend folder and run:
+  
+  ```bash
+  npm run test
+  ```
+
+Make sure you are in the correct directory (frontend or backend) before running the test commands.
+
+----
+
 ## 📝 Notes
 
 - **No external database required:** All data is persisted in JSON files for easy setup and demo.
