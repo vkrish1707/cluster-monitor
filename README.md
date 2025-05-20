@@ -52,6 +52,12 @@ cd cluster-monitor
 
 ### 2. Setup & Run Backend
 
+**Short summary to insert:**
+
+> **Note:** The `.env` file for backend configuration will be emailed to you. Please check your inbox, download the file, and place it in the `backend` directory before starting the backend server.
+
+---
+
 ```bash
 cd backend
 npm install
@@ -108,6 +114,7 @@ To execute test cases, you can run the following commands in the respective fold
   ```bash
   npm run test
   ```
+
 
 Make sure you are in the correct directory (frontend or backend) before running the test commands.
 
