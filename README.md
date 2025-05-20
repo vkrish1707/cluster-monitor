@@ -1,19 +1,118 @@
-# cluster-monitor
- 
-# Cluster Monitor Web Application
+# Cluster Monitor
 
-This is a full-stack take-home test project with a React (Next.js) frontend and AdonisJS backend.
-
-## 📦 Tech Stack
-- Frontend: Next.js, TypeScript, Tailwind CSS, Recharts, Axios
-- Backend: AdonisJS, Node.js, UUID, JSON-based data source
+A modern full-stack web application for monitoring storage cluster metrics, managing snapshot policies, and providing real-time analytics and visualizations.
 
 ---
 
-## 🚀 How to Run the Project
+## 🚀 Project Overview
 
-### 🖥 Backend (AdonisJS)
+**Cluster Monitor** enables users to monitor IOPS (Input/Output Operations Per Second) and Throughput metrics for storage clusters, configure snapshot policies, and analyze cluster health and anomalies through interactive dashboards.
+
+### Key Features
+
+- **Real-time Monitoring:** Visualize IOPS and Throughput (Read/Write) using beautiful charts.
+- **Snapshot Policy Management:** Create, update, and manage automated snapshot policies with flexible scheduling.
+- **Cluster Selection:** Easily switch between multiple clusters from the dashboard header.
+- **Anomaly Detection:** Visual indication of metric anomalies with customizable thresholds.
+- **Responsive Design:** Intuitive UI with support for desktop and mobile.
+- **Data Source:** Uses a local JSON-based data source for rapid development and demo purposes.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js, TypeScript, Tailwind CSS, Recharts, Axios
+- **Backend:** AdonisJS, Node.js, UUID, JSON for storage
+
+---
+
+## 📝 Getting Started
+
+The repository contains two main folders:
+
+- `frontend` – Next.js React app (UI)
+- `backend` – AdonisJS REST API (Data & logic)
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v20+ recommended)
+- [npm](https://www.npmjs.com/)
+
+---
+
+## ⚡️ Running the Project Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/cluster-monitor.git
+cd cluster-monitor
+
+```
+
+### 2. Setup & Run Backend
+
 ```bash
 cd backend
 npm install
-node ace serve --watch
+npm run dev
+```
+- The backend server will start on [http://localhost:3333](http://localhost:3333).
+
+### 3. Setup & Run Frontend
+
+Open a new terminal **(keep the backend running)**:
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+- The frontend app will start on [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📈 Usage
+
+- Visit [http://localhost:3000](http://localhost:3000) in your browser.
+- Use the dashboard to select clusters, view metrics, manage snapshot policies, and identify anomalies.
+- All cluster and metrics data are served by the AdonisJS backend from local JSON files.
+
+---
+
+## 📚 Code Structure
+
+```
+cluster-monitor/
+│
+├── backend/        # AdonisJS API (data, policies, clusters)
+│   └── ...
+└── frontend/       # Next.js UI (dashboard, components, styles)
+    └── ...
+```
+
+---
+
+## 📝 Notes
+
+- **No external database required:** All data is persisted in JSON files for easy setup and demo.
+
+---
+
+## 💡 Room for Improvement
+
+Here are some ideas and suggestions for further enhancement of the Cluster Monitor project:
+
+- **User Authentication & RBAC:** Add secure user authentication and role-based access control for multi-user environments.
+- **Database Integration:** Replace JSON file storage with a robust database (e.g., PostgreSQL, MongoDB) for scalability and persistence.
+- **Live WebSocket Updates:** Implement WebSocket or Server-Sent Events for real-time streaming of metrics and anomaly alerts.
+- **Advanced Anomaly Detection:** Integrate ML-based anomaly detection or customizable rules engine.
+- **Email & Slack Alerts:** Add automated notifications for policy breaches or detected anomalies.
+- **Audit Logs:** Maintain detailed logs of user actions and policy changes.
+- **Cluster Configuration Management:** Add UI and API endpoints for editing cluster configuration and metadata.
+- **API Documentation:** Auto-generate OpenAPI (Swagger) docs for all backend endpoints.
+- **Testing & CI/CD:** Add comprehensive unit, integration, and E2E tests, plus CI/CD workflows.
+- **Theme Customization:** Allow users to switch between dark/light themes or customize the dashboard appearance.
+- **Accessibility Improvements:** Enhance ARIA roles, keyboard navigation, and color contrast for WCAG compliance.
+
+---
