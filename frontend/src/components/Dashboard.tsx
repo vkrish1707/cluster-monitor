@@ -69,7 +69,7 @@ export default function Dashboard() {
     const createAnomalyDot = (key: string, threshold: number) => {
         return ({ cx, cy, payload }: any): React.ReactElement<SVGCircleElement | SVGGElement> => {
             if (payload[key] > threshold) {
-                return <circle cx={cx} cy={cy} r={5} fill="red" />;
+                return <circle key={`anomaly-circle-${cx}-${cy}`} cx={cx} cy={cy} r={5} fill="red" />;
             }
             return <g key={`anomaly-dot-${cx}-${cy}`} style={{ display: 'none' }} />;
         };
