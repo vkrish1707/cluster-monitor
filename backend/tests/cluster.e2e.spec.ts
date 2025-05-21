@@ -21,19 +21,29 @@ test.group('Cluster API', () => {
       .get(`/clusters/${testClusterId}/policy`)
       .expect(200)
 
-    assert.equal(res.body.frequency, 'weekly')
+    assert.equal(res.body.snapshotPolicy.frequency, 'daily')
   })
 
   test('PUT /clusters/:id/policy updates snapshot policy', async () => {
     const update = {
-      "frequency": "weekly",
-      "time": "03:00",
-      "timezone": "America/Los_Angeles",
-      "days": ["monday", "wednesday", "friday"],
-      "deleteAfterDays": 14,
-      "enabled": true,
-      "locking": true
-    }
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "snapshotPolicy": {
+          "enabled": true,
+          "locking": false,
+          "policyName": "Project Zeus",
+          "applyToDirectory": "production/project-Z",
+          "frequency": "daily",
+          "time": "05:00",
+          "timezone": "America/Los_Angeles",
+          "deleteAfterDays": 0,
+          "days": [
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri"
+          ]
+      }
+  }
 
     await supertest(BASE_URL)
       .put(`/clusters/${testClusterId}/policy`)

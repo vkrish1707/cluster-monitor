@@ -15,9 +15,9 @@ test.group('ClusterService', () => {
   test('should return snapshot policy for a valid cluster', async () => {
     const policy = await ClusterService.getPolicy(testClusterId)
 
-    assert(policy.frequency, 'Frequency is missing')
-    assert(policy.time, 'Time is missing')
-    assert(typeof policy.locking === 'boolean', 'Locking should be a boolean')
+    assert(policy.snapshotPolicy.frequency, 'Frequency is missing')
+    assert(policy.snapshotPolicy.time, 'Time is missing')
+    assert(typeof policy.snapshotPolicy.locking === 'boolean', 'Locking should be a boolean')
   })
 
   test('should throw error for invalid cluster ID', async (assert) => {
